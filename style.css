@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav{
+    background-color:rgb(2, 50, 82);
+    color: white;
+    height:60px;
+    display:flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+}
+nav li{
+    list-style: none;
+}
+.fullcontainer{
+    background-color: rgb(6, 155, 177);
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+.gamebox{
+    display:grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Rubik', sans-serif;
+    padding: 20px;
+    position: relative;
+}
+.box{
+    border: 3px solid black;
+    font-size: 9vw;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color:rgb(92, 234, 247);
+}
+.gameinfo{
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: 'Lobster', cursive;
+    color:aliceblue;
+}
+.imga img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+/* .line{
+    width: 20vw;
+    height:4px;
+    background-color: black;
+    position: absolute;
+    transition: width 1s ease-in-out;
+} */
+/* utility classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 20px;
+    padding: 10px 20px;
+    background-color:rgb(92, 234, 247);
+    cursor: pointer;
+    border-radius: 5px;
+}
+#reset:hover{
+    background-color:rgb(4, 95, 103);
+    color: white;
+}
+.info{
+    font-size: 25px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .fullcontainer{
+        flex-wrap: wrap ;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .gamebox{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
